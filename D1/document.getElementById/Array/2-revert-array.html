@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Array Sort</title>
+  </head>
+  <body>
+    <h2>Array Sort</h2>
+    <p>The sort() method sorts an array alphabetically.</p>
+    <p>The reverse() method reverts the elements.</p>
+
+    <button type="button" name="button" onclick="test()">Sort in descending order now</button>
+    <p id="demo"></p>
+    <script type="text/javascript">
+      var fruits = ["Banana", "Orange", "Apple", "Mango"];
+      document.getElementById('demo').innerHTML = fruits;
+      function test() {
+        fruits.sort();
+        fruits.reverse();
+        document.getElementById('demo').innerHTML = fruits;
+      }
+    </script>
+  </body>
+</html>

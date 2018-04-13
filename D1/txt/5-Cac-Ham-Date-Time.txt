@@ -1,0 +1,2 @@
+1:Date(): date
+2:getHours(): //

@@ -1,0 +1,14 @@
+1:A:Finding HTML Elements: document.getElementById(id):Find an element by element id
+ :B:Finding HTML Elements: document.getElementsByTagName(name):Find elements by tag name
+ :C:Finding HTML Elements: document.getElementsByClassName(name):Find elements by class name
+ : : :
+2:A:Changing HTML Elements: element.innerHTML =  new html content: Change the inner HTML of an element
+ :B:Changing HTML Elements: element."attribute" = new value: Change the attribute value of an HTML element
+ :C:Changing HTML Elements: element.setAttribute("attribute", value): Change the attribute value of an HTML element
+ :D:Changing HTML Elements: element.style."property" = new style: Change the style of an HTML element
+ : : :
+3:A:Adding and Deleting Elements:document.createElement(element): Create an HTML element
+ :B:Adding and Deleting Elements:document.removeChild(element): Remove an HTML element
+ :C:Adding and Deleting Elements:document.appendChild(element): Add an HTML element
+ :D:Adding and Deleting Elements:document.replaceChild(element): Replace an HTML element
+ :E:Adding and Deleting Elements:document.write(text): Write into the HTML output stream

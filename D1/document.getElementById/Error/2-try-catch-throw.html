@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>try catch throw</title>
+  </head>
+  <body>
+    <h2>try catch throw</h2>
+    <p>Plz input num between 3 and 9</p>
+    <input type="text" id="demo" name="" value="">
+    <button type="button" onclick="test()">Test Input</button>
+    <p id="message"></p>
+
+    <script type="text/javascript">
+      function test() {
+        var message,x;
+        message = document.getElementById('message');
+        message.innerHTML = "";
+        x = document.getElementById('demo').value;
+        try {
+          if(x == "") throw "Empty.Plz input";
+          if(isNaN(x)) throw "Not a Number";
+          x = Number(x); //remember thissss
+          if(x<3) throw 'too low';
+          if(x>9) throw "too high";
+        }
+        catch(err) {
+          message.innerHTML = "Input is " + err;
+        }
+      }
+    </script>
+  </body>
+</html>

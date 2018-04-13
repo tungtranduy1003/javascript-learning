@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>String</title>
+  </head>
+  <body>
+    <h1>Concat</h1>
+    <p id="demo">Say Hello</p>
+    <button type="button" name="button" onclick="test()">Click me</button>
+    <script type="text/javascript">
+      function test() {
+        var text1 = document.getElementById('demo').innerHTML;
+        var text2 = "To Pikachu";
+        document.getElementById('demo').innerHTML = "Oh" +" "+ text1.concat(" ", text2);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,13 @@
+1 : replace() : replace
+2 : length()  : length
+3 : indexOf() : search
+4 : lastindexOf() : search
+5 : search() : search
+6 : slice() : quan que gi vay
+7 : replace() : replace
+8 : toUpperCase() :all->upper
+9 : toLowerCase() : all->lower
+10  : concat()  : noi chuoi
+11  : charAt()  : var str = "HELLO WORLD";</br> str.charAt(0);            // returns H
+12  : charCodeAt()  : var str = "HELLO WORLD"; </br> str.charCodeAt(0);         // returns 72
+13  : toString()  : convert to string type

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>DOM-QuerySelector</title>
+    <style>
+      .ex {
+        border: 1px solid black;
+        margin: 5px;
+      }
+</style>
+  </head>
+  <body>
+    <h1>document.querySelectorAll(CSS selectors)</h1>
+    <a href="https://www.w3schools.com/cssref/css_selectors.asp">Click vao em di</a>
+    <h2>Get all elements in the document with class="ex"</h2>
+    <h2 class="ex">Pi`ka'chu`</h2>
+    <h2 class="ex">Do`re'mon`</h2>
+    <h2 class="ex">Son`go'ku`</h2>
+    <button class="ex" type="button" name="button" onclick="change()">Click me to change the CSS selector</button>
+    <script type="text/javascript">
+      function change() {
+        var x = document.querySelectorAll(".ex");
+        for(i=0;i<x.length;i++) {
+          x[i].style.backgroundColor = "orange";
+        }
+      }
+    </script>
+  </body>
+</html>

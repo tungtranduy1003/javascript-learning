@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Sorting Object Array</title>
+  </head>
+  <body>
+    <h2>Sorting Object</h2>
+    <h5>Sorting Cars On Age</h5>
+    <button type="button" name="button" onclick="Sort_By_Age()">Sorting cars by age</button>
+    <button type="button" name="button" onclick="Sort_By_Type()">Sorting cars by type</button>
+    <p id="demo"></p>
+    <script type="text/javascript">
+      var cars = [
+        {type:"Volvo", year:2016},
+        {type:"BMW", year:2018},
+        {type:"Isabella", year:2010}
+      ];
+      displayCars();
+
+//Sort_By_Age
+      function Sort_By_Age() {
+        cars.sort(function(a,b){return a.year - b.year});
+        displayCars_2();
+      }
+//Sort By type
+      function Sort_By_Type() {
+          cars.sort(function(a,b){
+            var x = a.type.toLowerCase();
+            var y = b.type.toLowerCase();
+            if (x<y) {return -1;}
+            if (x>y) {return 1;}
+          });
+          displayCars_2();
+      }
+
+      //2 ways to displayCars 1 for raw data 2 for many much data
+      function displayCars() {
+        document.getElementById('demo').innerHTML =
+        cars[0].type + " " + cars[0].year + "<br>" +
+        cars[1].type + " " + cars[1].year + "<br>" +
+        cars[2].type + " " + cars[2].year ;
+      }
+      //using for loop -- use arr.length and a text variable
+      function displayCars_2(){
+        var text = "<hr>";
+        var arr_length = cars.length;
+        for(i=0;i<arr_length;i++) {
+          text = text + cars[i].type + " " + cars[i].year;
+          text = text + "<br>";
+        }
+        text = text + "<hr>";
+        document.getElementById('demo').innerHTML = text;
+      }
+    </script>
+  </body>
+</html>

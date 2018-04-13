@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>animations</title>
+    <style media="screen">
+      #container {
+        width: 600px;
+        height: 600px;
+        position: relative;
+        background: orange;
+      }
+      #animate {
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        background-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <button type="button" name="button" onclick="moveItBabe()">Move it Babeeee</button>
+    <button type="button" name="button" onclick="moveItBabe1()">Move it Babeeee</button>
+  <div id="container" class="">
+      <div id="animate" class="">
+
+      </div>
+    </div>
+    <script type="text/javascript">
+      function moveItBabe() {
+        var ele = document.getElementById('animate');
+        var posi_top = 0;
+        var posi_left = 0;
+        var id = setInterval(frame, 10);
+        // var id1 = setInterval(frame1, 10);
+        function frame() {
+          if(posi_top == 570 && posi_left == 570) {
+            clearInterval(id);
+            // posi_left = posi_left - 3;
+            // posi_top = posi_top - 3;
+            // ele.style.top = posi_top + 'px';
+            // ele.style.left = posi_left +'px';
+            // setInterval(frame, 10);
+            // posi_left = posi_left - 3;
+            // posi_top = posi_top - 3;
+            // ele.style.top = posi_top + 'px';
+            // ele.style.left = posi_left +'px';
+          }
+          // if (posi_top == 570) {
+          //   posi_top = posi_top + 3;
+          //   posi_left = posi_left -3;
+          //   ele.style.top = posi_top + 'px';
+          // }
+          // else if (posi_top == 0 && posi_left == 570) {
+          //   posi_top = posi_top - 3;
+          //   ele.style.top = posi_top + "px";
+          //   ele.style.left = posi_left + "px";
+          // }
+          // else if (posi_top == 567 && posi_left == 567) {
+          //   posi_left = posi_left - 3;
+          //   posi_top = posi_top - 3;
+          //   ele.style.top = posi_top + 'px';
+          //   ele.style.left = posi_left +'px';
+          // }
+          else {
+            posi_top = posi_top + 3;
+            posi_left = posi_left +3;
+            ele.style.top = posi_top + 'px';
+            ele.style.left = posi_left +'px';
+          }
+        }
+      }
+
+        function moveItBabe1() {
+          var ele = document.getElementById('animate');
+          var posi_top = 570;
+          var posi_left = 570;
+          var id1 = setInterval(frame1, 10);
+          function frame1() {
+            if(posi_top == 570 && posi_left == 0){
+              clearInterval(id1);
+            }
+            else {
+              posi_left = posi_left - 3;
+              ele.style.left = posi_left +"px";
+            }
+
+          }
+
+        }
+
+
+    </script>
+  </body>
+</html>

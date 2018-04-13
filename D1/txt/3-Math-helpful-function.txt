@@ -1,0 +1,4 @@
+1:Math.random():random from 0 to 1
+2:Math.max.apply():tim max
+3:Math.min.apply():tim min
+4:Number():make value get from element become Number type

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Call</title>
+  </head>
+  <body>
+    <h2>Call Function Method</h2>
+    <p id="demo"></p>
+    <script type="text/javascript">
+      var person = {
+        fName:"Tung",
+        lName:"Tran",
+        age:91,
+        fullName: function() {
+          return this.fName + " " + this.lName;
+        }
+      };
+      var myObject = {
+        fName:"Mary",
+        lName:"James Monroe"
+      };
+      x = person.fullName.call(myObject);
+      document.getElementById('demo').innerHTML = x;
+    </script>
+  </body>
+</html>

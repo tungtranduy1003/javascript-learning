@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Comparisons-Check-Input-and-Use-it</title>
+  </head>
+  <body>
+    <h2>Comparisons-Check-Input-and-Use-it Also has toan' tu? 3 ngo^i</h2>
+    <p>Plz input ur age then click the button</p>
+    <input id="age" type="text" name="" value="">
+    <button type="button" name="button" onclick="test()">Submit</button>
+    <p id="demo"></p>
+    <script type="text/javascript">
+      function test() {
+        var age, voteable;
+        age = Number(document.getElementById('age').value);
+        if (isNaN(age)) {
+          voteable = "Input is not a number. Please enter again";
+        }
+        else {
+          voteable = (age < 18) ? "Too young Too fabulous" : "Old Buffalo";
+        }
+        document.getElementById('demo').innerHTML = voteable;
+      }
+    </script>
+  </body>
+</html>

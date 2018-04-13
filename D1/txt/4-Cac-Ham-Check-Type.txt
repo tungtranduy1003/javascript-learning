@@ -1,0 +1,3 @@
+1:isNaN():check if is a number of not
+2:typeof():check type of variable -- best for string/numbers
+3:isArray(): check if is array because JS counted array as a object

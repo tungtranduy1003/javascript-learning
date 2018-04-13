@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>DOM event</title>
+    <style media="screen">
+      div {
+        background-color:#D94A38;
+        width:170px;
+        height:80px;
+        margin:20px;
+        padding-top:20px;
+        color:#ffffff;
+        font-weight:bold;
+        font-size:18px;
+        float:left;
+        text-align:center;
+      }
+    </style>
+  </head>
+  <body>
+    <div onmouseover="this.innerHTML='Thank You'" onmouseout="this.innerHTML='Plz notice me senpai'" class="">
+        hiiiiiii
+    </div>
+
+    <div id="get" onclick="clickMeEvent()" class="">
+        Click me babe
+    </div>
+    <script type="application/javascript">
+      function clickMeEvent() {
+        var obj = document.getElementById('get');
+        if (obj.innerHTML == "Click me babe") {
+          obj.innerHTML = "Notice me senpai";
+          return;
+        }
+        if (obj.innerHTML == "Notice me senpai") {
+          obj.innerHTML = "Crush me plz";
+          return;
+        }
+        if (obj.innerHTML == "Crush me plz") {w
+          obj.innerHTML = "Fadeeeeeeee!!!!!";
+          return;
+        }
+        if (obj.innerHTMl == "Fadeeeeeeee!!!!!") {
+          obj.style.display = "none";
+          return;
+        }
+      }
+    </script>
+  </body>
+</html>

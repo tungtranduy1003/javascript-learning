@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Convert decimal to binary and back</title>
+  </head>
+  <body>
+    <h2>Convert decimal to binary</h2>
+    <p id="demo"></p>
+    <script type="text/javascript">
+      document.getElementById('demo').innerHTML = dec2bin(-5);
+      function dec2bin(dec_num) {
+        return (dec_num >>> 0).toString(2);
+      }
+    </script>
+  </body>
+</html>

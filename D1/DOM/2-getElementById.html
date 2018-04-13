@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>getElementById</title>
+  </head>
+  <body>
+    <h2>Finding HTML element by ID</h2>
+    <p id="demo">Come here babe</p>
+    <p id="test"></p>
+    <script type="text/javascript">
+      var myElement = document.getElementById('test');
+      myElement.innerHTML = document.getElementById('demo').innerHTML;
+    </script>
+  </body>
+</html>

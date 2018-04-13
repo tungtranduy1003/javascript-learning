@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Inner JS in Head Tag </title>
+    <script type="text/javascript">
+      function myFunction() {
+        document.getElementById("demo").innerHTML = "Paragraph changed.";
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Inner JS in Head Tag / It also can be in Body tag/ always between "script" tag</h1>
+    <p id="demo">This text will be changed</p>
+    <button type="button" name="button" onclick="myFunction()">Change it now</button>
+  </body>
+</html>

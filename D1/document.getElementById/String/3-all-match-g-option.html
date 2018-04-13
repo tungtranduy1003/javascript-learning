@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>String</title>
+  </head>
+  <body>
+    <h1>Replace string all match</h1>
+    <button type="button" name="button" onclick="myFunction()">Click me Senpai</button>
+    <p id="demo">Welcome to xxx and xxx and xxx</p>
+    <script type="text/javascript">
+    function myFunction() {
+      var str = document.getElementById('demo').innerHTML;
+      var txt = str.replace(/xxx/g, "My House");
+      document.getElementById('demo').innerHTML = txt;
+    }
+    </script>
+  </body>
+</html>

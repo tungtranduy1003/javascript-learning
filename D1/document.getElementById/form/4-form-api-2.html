@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Form API</title>
+  </head>
+  <body>
+    <p>Enter a number</p>
+    <input id="id1" type="number" min="69" max="100">
+    <button type="button" name="button" onclick="test()">Ok</button>
+    <p id="demo"></p>
+    <script type="text/javascript">
+      function test() {
+        var txt= "";
+        if (document.getElementById('id1').validity.rangeOverflow) {
+          txt = "too large";
+        }
+        else if (document.getElementById("id1").validity.rangeUnderflow) {
+          txt = "Value too small";
+        }
+        else {
+          txt = "Ok";
+        }
+        document.getElementById('demo').innerHTML = txt;
+      }
+    </script>
+
+  </body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html>
+<body>
+
+<p>Enter a number and click OK:</p>
+
+<input id="id1" type="number" max="100">
+<button onclick="myFunction()">OK</button>
+
+<p>If the number is greater than 100 (the input's max attribute), an error message will be displayed.</p>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    var txt = "";
+    if (document.getElementById("id1").validity.rangeOverflow) {
+        txt = "Value too large";
+    } else {
+        txt = "Input OK";
+    }
+    document.getElementById("demo").innerHTML = txt;
+}
+</script>
+
+</body>
+</html> -->

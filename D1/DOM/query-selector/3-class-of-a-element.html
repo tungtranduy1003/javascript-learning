@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>query selectors</title>
+  </head>
+  <body>
+    <h2>Query Selector a class of a element</h2>
+    <p class="test">yoyoyoyo</p>
+    <p class="test">yiyiyiyiyi</p>
+    <p id="demo"></p>
+    <script type="text/javascript">
+      var x = document.querySelectorAll('p.test');
+      text = "";
+      for(i=0;i<x.length;i++) {
+        x[i].style.color = "orange";
+        text = text + x[i].innerHTML;
+        // text[i].style.color = "blue"; //error
+      }
+      document.getElementById('demo').innerHTML = text;
+
+    </script>
+  </body>
+</html>

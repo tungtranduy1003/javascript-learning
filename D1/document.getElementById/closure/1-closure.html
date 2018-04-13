@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Closure</title>
+  </head>
+  <body>
+    <h2>Closure</h2>
+    <p id="demo">0</p>
+    <button type="button" name="button" onclick="test()">Count</button>
+    <script type="text/javascript">
+      var add = (
+        function () {
+          var counter = 0;
+          return function () {return counter = counter +1;}
+        }
+      ) ();
+
+      function test() {
+        document.getElementById('demo').innerHTML = add();
+      }
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Numeric Sort</title>
+  </head>
+  <body>
+    <h2>Numeric Sort</h2>
+    <button type="button" name="button" onclick="test()">Click me to Sort ascending numbers</button>
+  <button type="button" name="button" onclick="test1()">Click me to Sort descending numbers</button>
+    <p id="demo"></p>
+    <button type="button" name="button" onclick="test2()">Click me to Sort ascending alphabetically</button>
+    <button type="button" name="button" onclick="test3()">Click me to Sort descending alphabetically</button>
+    <script type="text/javascript">
+      var points = [25, 30, 45, 100, 5, 10, 3, 9, 6];
+      document.getElementById('demo').innerHTML = points;
+
+      function test() {
+        points.sort(function(a,b){return a-b});
+        document.getElementById('demo').innerHTML = points;
+      }
+
+      function test1() {
+        points.sort(function(a,b){return b-a});
+        document.getElementById('demo').innerHTML = points;
+      }
+
+      function test2() {
+        points.sort();
+        document.getElementById('demo').innerHTML = points;
+      }
+
+      function test3() {
+        points.sort();
+        points.reverse();
+        document.getElementById('demo').innerHTML = points;
+      }
+    </script>
+  </body>
+</html>

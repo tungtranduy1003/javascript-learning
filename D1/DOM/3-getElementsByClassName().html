@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>getElementsByClassName</title>
+  </head>
+  <body>
+    <h2>Finding HTML elements by Class name</h2>
+    <p class='yolo'>Red</p>
+    <p class='yolo'>Ash</p>
+    <p class='yolo'>Satoshi</p>
+    <p class='yolo'>Hihihi</p>
+    <p id="demo"></p>
+    <p id="test1"></p>
+    <p id="test2"></p>
+    <p id="test3"></p>
+    <script type="text/javascript">
+      var x = document.getElementsByClassName('yolo');
+      document.getElementById("test1").innerHTML = Array.isArray(x);
+      document.getElementById("test2").innerHTML = typeof x;
+      document.getElementById("test3").innerHTML = x instanceof Object;
+      var text = "";
+      for(i=0;i<x.length;i++) {
+        text = text + x[i].innerHTML + "</br>";
+      }
+      document.getElementById('demo').innerHTML = text;
+    </script>
+  </body>
+</html>

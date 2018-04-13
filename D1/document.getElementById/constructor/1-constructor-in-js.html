@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Constructor</title>
+  </head>
+  <body>
+    <h2>Constructor in JS</h2>
+    <p id="demo"></p>
+    <script type="text/javascript">
+    // function __constructor
+      function Person(fname,lname,age,eyeColor) {
+        this.firstName = fname;
+        this.lastName = lname;
+        this.age = age;
+        this.eyeColor = eyeColor;
+      }
+
+      //
+      var myFather = new Person("Tung", "Tran", 50, "purple");
+      // khoi? tao. bien' vs ten la` myFather
+      // xac dihh data type cua? bien' la Object (new)
+      //goi. Constructor function Person de? truyen cac gia tri vao` bien'
+      // tu` khoa' this se~ dai. dien. cho myFather
+      // firstName,lastName,age,eyeColor la` cac properties cua? Person==myFather
+      // fname,lname,age,eyeColor la` cac' parameters/tham so' mang y nghia tuong trung khong phai thuc su
+      // tham tri. thuc su. truyen vao la`"Tung", "Tran", 50, "purple" -- con dc goi la parameter
+
+      document.getElementById('demo').innerHTML =
+      "My father is " + myFather.age + ".";
+
+    </script>
+  </body>
+</html>

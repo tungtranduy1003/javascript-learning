@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>DOM</title>
+  </head>
+  <body>
+    <h2>getElementsByTagName</h2>
+    <p>Pikachu</p>
+    <p>Doraemon</p>
+    <p>Pokemon</p>
+    <p id="test"></p>
+    <b><p id="demo"></p></b>
+    <script type="text/javascript">
+      var x = document.getElementsByTagName('p');
+      // tra ve data type of x is object
+      document.getElementById("test").innerHTML = Array.isArray(x);
+      var text = "<br>";
+      for(i=0;i<x.length;i++) {
+        text = text + x[i].innerHTML + "</br>";
+      }
+      document.getElementById('demo').innerHTML = text;
+    </script>
+  </body>
+</html>

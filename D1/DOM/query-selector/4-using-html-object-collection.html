@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>query selector</title>
+  </head>
+  <body>
+    <form id="form1" class="" action="index.html" method="post">
+      First Name: <input type="text" name="fname" value="Donald"><br>
+      Last Name: <input type="text" name="lname" value="Mac"><br><br>
+      <input type="submit" name="" value="Submit">
+    </form>
+    <button type="button" name="button" onclick="getIt()">Get It</button>
+    <p id="demo"></p>
+    <script type="text/javascript">
+      function getIt() {
+        var x = document.forms["form1"];
+        var text = "";
+        var i;
+        for (i=0;i<x.length;i++) {
+          text = text + x.elements[i].value + "<br>";
+        }
+        document.getElementById('demo').innerHTML = text;
+      }
+    </script>
+  </body>
+</html>

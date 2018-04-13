@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>R.E /i option</title>
+  </head>
+  <body>
+    <h1>R.E /i option</h1>
+    <p>This i option will perform case-insensitive matching == all match no matter what Upper or Lower </p>
+    <button type="button" name="button" onclick="myFunction()">Change it</button>
+    <p id="demo">Welcome to pikachu</p>
+    <script type="text/javascript">
+      function myFunction() {
+        var str = document.getElementById('demo').innerHTML;
+        var txt = str.replace(/PIKACHU/i, 'My House');
+        document.getElementById('demo').innerHTML = txt;
+      }
+    </script>
+  </body>
+</html>

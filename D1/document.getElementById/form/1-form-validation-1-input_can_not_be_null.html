@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>form validation</title>
+  </head>
+  <body>
+    <h1>Form validation</h1>
+    <script type="text/javascript">
+      function validateForm() {
+        var x = document.forms["myForm"]["fname"].value; //ten form -> ten truong` -> value
+        if (x == "") {
+          alert("Name must be filled out");
+          return false;
+        }
+      }
+    </script>
+
+    <form onsubmit="return validateForm()" name="myForm" class="" action="/action_page.php" method="post">
+      Name: <input type="text" name="fname">
+      <input type="submit" name="" value="Submit">
+    </form>
+  </body>
+</html>

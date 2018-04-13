@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h2>JS Arrays</h2>
+    <p id="demo">Hoho</p>
+    <script type="text/javascript">
+      var fruits, text, fLen, i;
+      fruits = ["Banana", "Orange", "Apple", "Mango"];
+      fLen = fruits.length;
+      text = "<ul>";
+      for(i = 0; i<fLen; i++) {
+        text = text + "<li>" + fruits[i] + "</li>";
+      }
+      text = text + "</ul>";
+      document.getElementById('demo').innerHTML = text;
+    </script>
+  </body>
+</html>

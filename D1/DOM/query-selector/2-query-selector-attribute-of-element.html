@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>query selector</title>
+    <style>
+        div {
+            border: 1px solid black;
+            margin-bottom: 10px;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="">
+      <a href="" target="_blank">hahahha</a>
+    </div>
+    <div class="">
+      <a href="" target="_blank">hihihi</a>
+    </div>
+    <div class="">
+      <a href="" >heheheh</a>
+    </div>
+    <a href="" target="_blank">huhuhuh</a>
+    <a href="" target="_blank">humhumhumhum</a>
+    <a href="#">hohoho</a>
+    <button type="button" name="button" onclick="change()">Click me senpai</button>
+    <script type="text/javascript">
+    function change() {
+      var x = document.querySelectorAll('div > a[target]');
+      var i;
+      for (i=0;i<x.length;i++) {
+        x[i].style.border = "3px solid red";
+      }
+    }
+
+    </script>
+  </body>
+</html>

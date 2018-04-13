@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Find Min Max Number In Array</title>
+  </head>
+  <body>
+    <h2>Find Min Max Number In Array</h2>
+    <button type="button" name="button" onclick="find_min_1()">Find min 1</button>
+    <button type="button" name="button" onclick="find_min_2()">Find min 2</button>
+    <button type="button" name="button" onclick="find_min_3()">Find min 3</button>
+    <p>The lowest number in array is: <span id="find-min"></span>  </p>
+    <p id="demo"></p>
+    <p>The highest number in array is: <span id="find-max"></span> </p>
+    <button type="button" name="button" onclick="find_max_1()">Find max 1</button>
+    <button type="button" name="button" onclick="find_max_2()">Find max 2</button>
+    <button type="button" name="button" onclick="find_max_3()">Find max 3</button>
+    <script type="text/javascript">
+      var points = [5,6,9,3,12,15,18,21,24,100,50,60,30,90,99,33];
+      document.getElementById('demo').innerHTML = points;
+      //Find_Max
+      //find_max_1
+      function find_max_1() {
+        points.sort(function(a,b){return a-b});
+        document.getElementById('find-max').innerHTML = points[points.length-1];
+      }
+
+
+      //find_max_2
+      function find_max_2() {
+        document.getElementById('find-max').innerHTML = Find_Max(points);
+      }
+      //this function using function Find Max (Math.max)
+
+      //find_max_3
+      function find_max_3() {
+        document.getElementById('find-max').innerHTML = Find_Max_2(points);
+      }
+
+      //Find_Max
+      function Find_Max(arrName) {
+        return Math.max.apply(null, arrName);
+      }
+
+      //Find_Max_2
+      function Find_Max_2(arrHere) {
+        var length = arrHere.length;
+        var max = -Infinity;
+        while (length--) {
+          if (arrHere[length] > max) {
+            max = arrHere[length];
+          }
+        }
+        return max;
+      }
+
+//End of Find_Max
+
+
+//Find_Min
+      function Find_Min(arrName) {
+        return Math.min.apply(null, arrName);
+      }
+      //Find_Min_2
+      function Find_Min_2(arr) {
+        var length = arr.length;
+        var min = Infinity;
+        while(length--) {
+          if(arr[length] < min) {
+            min = arr[length];
+          }
+        }
+        return min;
+      }
+
+      //find_min_1
+      function find_min_1() {
+        points.sort(function(a,b){return a-b});
+        document.getElementById('find-min').innerHTML = points[0];
+      }
+
+      //find_min_2
+      function find_min_2() {
+        document.getElementById('find-min').innerHTML = Find_Min(points);
+      }
+
+      //find_min_3
+      function find_min_3() {
+        document.getElementById('find-min').innerHTML = Find_Min_2(points);
+      }
+//End of Find_Min
+    </script>
+  </body>
+</html>

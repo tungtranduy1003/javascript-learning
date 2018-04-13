@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Note for loop</title>
+  </head>
+  <body>
+    <h2>Note for FOR loop in JS </h2>
+    <p>The JavaScript for/in statement loops through the properties of an object:</p>
+    <p>Here is example for u</p>
+    <p id="demo"></p>
+    <script type="text/javascript">
+      var txt="";
+      var person = {fname:"Tung", lname:"Tran", age:17};
+      var i;
+      for (i in person) {
+        txt = txt + person[i] + " ";
+      }
+      document.getElementById('demo').innerHTML = txt;
+    </script>
+  </body>
+</html>

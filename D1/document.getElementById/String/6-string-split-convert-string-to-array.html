@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>String</title>
+  </head>
+  <body>
+    <h1>String split --- Convert string to array</h1>
+    <button type="button" name="button" onclick="arr.forEach(test)">Click me</button>
+    <p id="demo"></p>
+    <script type="text/javascript">
+    var str = "a,b,c,d,e,f,g,h";
+    var arr = str.split();
+      function test() {
+        // var str = "a,b,c,d,e,f,g,h";
+        // var arr = str.split();
+        document.getElementById('demo').innerHTML = arr;
+        // foreach(arr as array_element) {
+        //   document.getElementById('demo').innerHTML = array_element;
+        // }
+      }
+    </script>
+  </body>
+</html>

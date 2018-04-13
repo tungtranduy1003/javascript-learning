@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Form validation</title>
+  </head>
+  <body>
+    <h2>form validation</h2>
+    <p>Plz input number between 3-9</p>
+    <input id="numb" type="text" name="" value="">
+    <button type="button" name="button" onclick="test()">Test me</button>
+    <p id="demo"></p>
+    <script type="text/javascript">
+      function test() {
+        var x,text;
+        x = document.getElementById('numb').value;
+        if(isNaN(x) || x<3 || x>9) {
+          text = "Invalid Input";
+        }
+        else {
+          text="ok";
+        }
+        document.getElementById('demo').innerHTML = text;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,18 @@
+*:Special:var fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+1:isArray():check if array or not
+2:typeof():return type of variable
+3:pop():removes last element of an array
+4:push():add new element to an array at the end
+5:shift():removes the 1st element of array
+6:splice(2,0,"Lemon","Kiwi"):2-position of new elements<br>0-how many elements should be removed<br>rest-new elements would be added
+7:fruits.splice(0, 1):remove the 1st element of fruits array
+8:fruits.splice(1):slice out the rest part of fruits array starting from index 1 == Orange into a new array<br>Orange,Lemon,Apple,Mango
+9:sort():sort an array alphabetically
+10:sort()<br>+<br>reverse():this combo help sort an array in descending order
+11:reverse():reverses the elements in an array
+12:Note 1:Sort cannot directly sorting numbers<br>Please see Array/...-Numeric-sort
+13:function(a, b){return a-b}:The Compare function--Used for sorting numbers
+14:fruits[0]:take the value or first element in fruits array
+15:fruits[fruits.length-1]:take value of last element
+16:Math.max.apply(null, arr):find max/highest number in array
+17:Math.min.apply(null, arr):find min/lowest number in array
