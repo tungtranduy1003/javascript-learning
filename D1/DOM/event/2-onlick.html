@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>onclick anotherway</title>
+  </head>
+  <body>
+    <h2>onclick another way</h2>
+    <button id="myBTN" type="button" name="button">Click me</button>
+    <p id="demo"></p>
+    <script type="text/javascript">
+      document.getElementById('myBTN').onclick = displayDate;
+      function displayDate() {
+        document.getElementById('demo').innerHTML = Date();
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>event listener</title>
+  </head>
+  <body>
+    <p>humhumhumhum</p>
+    <button type="button" name="button" id='btn'></button>
+    <script type="text/javascript">
+      var x = document.getElementById('btn');
+      x.addEventListener('click',Func1);
+      x.addEventListener('click',Func2);
+
+      function Func1() {
+        alert("Hello guest");
+      }
+
+      function Func2() {
+        alert('Say hi to me');
+      }
+      //add event listener click == click la chay func1 --> chay. func2 theo thu tu khaibao
+    </script>
+  </body>
+</html>

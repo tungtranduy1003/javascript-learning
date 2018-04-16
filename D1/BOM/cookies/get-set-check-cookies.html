@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Get set check cookies</title>
+  </head>
+  <body onload="checkCookie()">
+    <h2>Get Set Check Cookies</h2>
+    <script type="text/javascript">
+      function setCookie(cName, cValue,exdays) {
+        var day = new Date();
+        //lay ngay thang hien tai luu vao bien day voi type object
+        day.setTime(day.getTime() + (exdays*24*60*60*1000));
+        var expires = "expires=" + day.toGMTString();
+        document.cookie = cName + '=' + cValue + ";" + expires +  ";path=/";
+      }
+
+      function getCookie(cName) {
+        var name = cName + "=";
+        var decodedCookie = decodeURIComponent(document.cookie);
+        var ca = decodedCookie.split(';');
+
+        for(var i=0;i<ca.length;i++){
+          var c = ca[i];
+          while(c.charAt(0) == ' '){ //ko co space vs co space
+            c = c.substring(1);
+          }
+          if(c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+          }
+          return "";
+        }
+      }
+
+      function checkCookie() {
+        var user = getCookie('username');
+        if(user != "") {
+          alert("Welcome again" + user);
+
+        }
+        else {
+          user = prompt("plz enter ur name:","");
+          if (user != "" && user != null) {
+            setCookie("username", user ,30);
+          }
+        }
+      }
+
+    </script>
+  </body>
+</html>

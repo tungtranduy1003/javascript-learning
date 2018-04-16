@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Onload</title>
+  </head>
+  <body onload = "checkCookies()">
+    <p id="demo"></p>
+    <script type="text/javascript">
+      function checkCookies() {
+        var txt="";
+        if (navigator.cookieEnabled == true) {
+          txt = "enabled";
+        }
+        else {
+          txt = "not enabled";
+        }
+        document.getElementById('demo').innerHTML = txt;
+      }
+    </script>
+  </body>
+</html>

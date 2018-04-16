@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>DOM onchange</title>
+  </head>
+  <body>
+    <h2>DOM onchange</h2>
+    <p>Enter ur name: <input type="text" id="fname" onchange="test()"></p>
+    <p>To uppercase</p>
+    <script type="text/javascript">
+      function test() {
+        var x = document.getElementById('fname');
+        x.value = x.value.toUpperCase();
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Remove Event Listener</title>
+    <style>
+        #myDIV {
+            background-color: coral;
+            border: 1px solid;
+            padding: 50px;
+            color: white;
+        }
+    </style>
+  </head>
+  <body>
+    <div id="myDIV">This div element has an onmousemove event handler that displays a random number every time you move your mouse inside this orange field.
+      <p>Click the button to remove the DIV's event handler.</p>
+      <button type="button" name="button" onclick="addEventListenerFunc()">Add event</button>
+      <button onclick="removeHandler()" id="myBtn">Remove it</button>
+    </div>
+    <p id="demo"></p>
+    <script type="text/javascript">
+      function addEventListenerFunc() {
+          document.getElementById('myDIV').addEventListener('mousemove', myFunction);
+      }
+      // document.getElementById('myDIV').addEventListener('mousemove', myFunction);
+
+      function myFunction() {
+        document.getElementById('demo').innerHTML = Math.random();
+      }
+      function removeHandler() {
+        document.getElementById("myDIV").removeEventListener('mousemove', myFunction);
+        document.getElementById("demo").innerHTML = "";
+      }
+    </script>
+  </body>
+</html>

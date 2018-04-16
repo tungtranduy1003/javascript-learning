@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>XMLHttpRequest Object</title>
+  </head>
+  <body>
+    <h2>XMLHttpRequest Object</h2>
+    <p id="demo">Change me now</p>
+    <button type="button" name="button" onclick="loadDoc()">Change content</button>
+    <script type="text/javascript">
+      function loadDoc() {
+        var xhttp = new XMLHttpRequest();
+        //khoi tao object XMLHttpRequest va gan' vao bien' xhttp
+        xhttp.onreadystatechange = function() {
+          console.log(this.readyState);
+          if(this.readyState == 4 && this.status == 200) {
+            document.getElementById('demo').innerHTML = this.responseText;
+          }
+        };
+        //kiem tra khi state cua xhttp change + neu state =4 va stt=200 ->
+        // gan' text cho demo  = responseText
+        xhttp.open("GET", "ajax_info.txt", true);
+        xhttp.send();
+
+      }
+    </script>
+  </body>
+</html>
+
+
+<!--
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>The XMLHttpRequest Object</h2>
+
+<p id="demo">Let AJAX change this text.</p>
+
+<button type="button" onclick="loadDoc()">Change Content</button>
+
+<script>
+function loadDoc() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    // console.log(this);
+    if (this.readState == 4 && this.status == 200) {
+      document.getElementById("demo").innerHTML = this.responseText;
+    }
+  };
+  xhttp.open("GET", "ajax_info.txt", true);
+  xhttp.send();
+}
+</script>
+
+</body>
+</html> -->

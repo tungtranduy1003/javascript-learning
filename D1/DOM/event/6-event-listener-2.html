@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>DOM event listener</title>
+  </head>
+  <body>
+    <button id="btn" type="button" name="button">Click me</button>
+    <p id="demo"></p>
+    <input type="text" name="" value="huhu" id="oh">
+    <script type="text/javascript">
+      var x = document.getElementById('btn');
+      var y = document.getElementById('demo');
+      var z = document.getElementById('oh');
+      x.addEventListener('mouseover',func1);
+      x.addEventListener('mouseout',func2);
+      x.addEventListener('click',func3);
+      x.addEventListener('change',func4);
+      x.addEventListener('click',function (){alert('Hello');});
+      z.addEventListener('focus',function () {x.style.backgroundColor="yellow";});
+      x.addEventListener('mouseover',function(){alert('Mouse over');});
+      x.addEventListener('mouseout',function(){alert('Mouse out');});
+      function func1() {
+        y.innerHTML += "Mouse Over!</br>";
+      }
+      function func2() {
+        y.innerHTML += "Mouse Out!!<br>";
+      }
+      function func3() {
+        y.innerHTML += "Clicked!!!<br>";
+      }
+      function func4() {
+        y.innerHTMl = y.innerHTML.toUpperCase();
+      }
+    </script>
+  </body>
+</html>

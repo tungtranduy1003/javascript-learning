@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>DOM event bubbling-capturing</title>
+    <style>
+        div {
+            background-color: coral;
+            border: 1px solid;
+            padding: 50px;
+        }
+    </style>
+  </head>
+  <body>
+    <h2>DOM event bubbling-capturing</h2>
+    <p>event propagation --- bubbling the inner most element's event is handeled 1st then the outer<br>
+    capturing --- the outer most elements'event is handeled 1st then the inner <br>
+    With the addEventListener() method you can specify the propagation type by using the "useCapture" parameter:<br>
+  <b>  addEventListener(event, function, useCapture); </b>
+ </p>
+<div id="myDiv" class="">
+  <p id="myP">Click me, Bubbling here</p>
+</div>
+<div id="myDiv2" class="">
+  <p id="myP2">Click me, Capturing here</p>
+</div>
+<script type="text/javascript">
+  document.getElementById('myP').addEventListener('click', function() {
+    alert('u clicked P element');
+  },false);
+  document.getElementById('myDiv').addEventListener('click', function() {
+    alert('u clicked Div element');
+  },false);
+  document.getElementById('myP2').addEventListener('click', function() {
+    alert('u clicked P2 element');
+  },true);
+  document.getElementById('myDiv2').addEventListener('click', function() {
+    alert('u clicked Div2 element');
+  },true);
+</script>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>DOM nodes</title>
+  </head>
+  <body>
+    <div class="" id="div1">
+      <p id="p1">P1</p>
+      <p id="p2">P2</p>
+      <p id="p3">Replace P</p>
+    </div>
+    <script type="text/javascript">
+      var new_node = document.createElement('p');
+      var text_node = document.createTextNode('New para');
+      new_node.appendChild(text_node);
+
+      var element = document.getElementById('div1');
+      var child = document.getElementById('p1');
+      element.appendChild(new_node); //them vao cuoi' cung`
+      element.insertBefore(new_node, child); //them vao truoc child
+      element.removeChild(document.getElementById('p2')); //remove p2
+      element.replaceChild(p3,p1); // replace p1 boi? p3
+    </script>
+  </body>
+</html>
